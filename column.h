@@ -1,15 +1,18 @@
-#define REALOC_SIZE 256
 #ifndef COLUMN_H
 #define COLUMN_H
 
-typedef struct
-{
-    char* title;
-    int* data;
-    int physical_size;
-    int logical_sizes;
-}COLUMN;
+// Define the reallocation size
+#define REALLOC_SIZE 256
 
+// Structure for a column
+typedef struct {
+    char* title;         // Title of the column
+    int* data;           // Array to hold integer-type data
+    int physical_size;   // Physical size of the data array
+    int logical_sizes;   // Logical size of the data array
+} COLUMN;
+
+// Function prototypes
 COLUMN *create_column(char *title);
 int insert_value(COLUMN *col, int value);
 void delete_column(COLUMN **col);
@@ -19,4 +22,5 @@ int get_index_val(COLUMN *col,int index);
 int nb_val_lower_than_x(COLUMN *col,int val);
 int nb_val_greater_than_x(COLUMN *col,int val);
 int count_value(COLUMN *col,int val);
+
 #endif
