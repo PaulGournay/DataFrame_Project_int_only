@@ -1,6 +1,6 @@
+#include "column.h"
 
-
-int** create_cdataframe();
+COLUMN** create_cdataframe();
 void fill_dataframe(int** dataframe);
 void hard_fill_dataframe(int** dataframe);
 void display_entire_dataframe(int** dataframe);
