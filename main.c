@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <column.h>
 
+#include <cdataframe.h>
 int main() {
     // Create a new column
     COLUMN *mycol = create_column("My column");
@@ -31,6 +31,8 @@ int main() {
 
     // Free allocated memory
     delete_column(&mycol);
+    CDATAFRAME *df= create_dataframe("My column2");
+
 
     return 0;
 }

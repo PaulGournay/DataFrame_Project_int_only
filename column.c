@@ -7,8 +7,7 @@ COLUMN *create_column(char *title){
     // Allocate memory for the column structure
     COLUMN *col = (COLUMN*) malloc(sizeof(COLUMN));
     if (col == NULL) {
-        fprintf(stderr, "Memory allocation failed\n");
-        exit(EXIT_FAILURE);
+        printf("Memory allocation failed\n");
     }
     // Initialize column attributes
     col->title = title;
@@ -24,7 +23,7 @@ int insert_value(COLUMN *col, int value) {
         // Reallocate memory if necessary
         int *temp = (int *) realloc(col->data, (col->physical_size + REALLOC_SIZE) * sizeof(int));
         if (temp == NULL) {
-            fprintf(stderr, "Memory allocation failed\n");
+            printf("Memory allocation failed\n");
             return 0;
         }
         col->data = temp;
