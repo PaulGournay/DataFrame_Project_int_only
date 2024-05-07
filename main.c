@@ -31,15 +31,22 @@ int main() {
 
     // Free allocated memory
     delete_column(&mycol);
-    CDATAFRAME *df= create_dataframe(3);
+    /*CDATAFRAME *df= create_dataframe(3);
     fill_dataframe_user(df );
     display_entire_dataframe(*df);
     printf("\n");
     display_row_part_dataframe(*df,2);
-    display_col_part_dataframe(*df,2);
+    display_col_part_dataframe(*df,2);*/
     /*CDATAFRAME *df2= create_dataframe(5);
     hard_fill_dataframe(df2);
     display_entire_dataframe(*df2);*/
+    CDATAFRAME *df3= create_dataframe(2);
+    OXO_fill_dataframe(df3);
+    display_entire_dataframe(*df3);
+    display_row_part_dataframe(*df3,2);
+    display_col_part_dataframe(*df3,2);
+    add_row(df3);
+    display_entire_dataframe(*df3);
 
     return 0;
 }

@@ -44,6 +44,18 @@ void hard_fill_dataframe(CDATAFRAME* dataframe){
         }
     }
 }
+void OXO_fill_dataframe(CDATAFRAME* dataframe){
+    int val;
+    int len;
+    char* title;
+    for(int i=0;i<(dataframe)->logical_size;i++){
+        for (int j = 0; j< 5; j++) {
+
+            insert_value(dataframe->columns[i], 1);
+        }
+    }
+}
+
 void display_entire_dataframe(CDATAFRAME dataframe){
     for (int i = 0; i<dataframe.logical_size ; i++){
         printf("title : %s\n",dataframe.columns[i]->title);
@@ -68,4 +80,12 @@ void display_col_part_dataframe(CDATAFRAME dataframe,int col){
     printf("title : %s\n",dataframe.columns[col-1]->title);
     printf("\n");
     print_col(dataframe.columns[col-1]);
+}
+void add_row(CDATAFRAME* dataframe){
+    int val=0;
+    for (int i = 0; i < dataframe->logical_size; i++) {
+        printf("enter a value for column %d: ", i+1);
+        scanf("%d",&val);
+        insert_value(dataframe->columns[i], val);
+    }
 }

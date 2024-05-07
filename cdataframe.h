@@ -9,6 +9,7 @@ typedef struct {
 CDATAFRAME *create_dataframe(int size);
 void fill_dataframe_user(CDATAFRAME* dataframe);
 void hard_fill_dataframe(CDATAFRAME* dataframe);
+void OXO_fill_dataframe(CDATAFRAME* dataframe);
 void display_entire_dataframe(CDATAFRAME dataframe);
 void display_row_part_dataframe(CDATAFRAME dataframe,int row);
 void display_col_part_dataframe(CDATAFRAME dataframe,int col);
