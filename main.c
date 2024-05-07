@@ -1,11 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <time.h>
 #include <cdataframe.h>
 int main() {
     // Create a new column
     COLUMN *mycol = create_column("My column");
-
+    srand(time(NULL));
     // Insert values into the column
     insert_value(mycol, 52);
     insert_value(mycol, 44);
@@ -32,7 +32,14 @@ int main() {
     // Free allocated memory
     delete_column(&mycol);
     CDATAFRAME *df= create_dataframe(3);
-
+    fill_dataframe_user(df );
+    display_entire_dataframe(*df);
+    printf("\n");
+    display_row_part_dataframe(*df,2);
+    display_col_part_dataframe(*df,2);
+    /*CDATAFRAME *df2= create_dataframe(5);
+    hard_fill_dataframe(df2);
+    display_entire_dataframe(*df2);*/
 
     return 0;
 }

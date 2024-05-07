@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "column.h"
+
+
 
 // Function to create a new column
 COLUMN *create_column(char *title){
@@ -11,9 +14,10 @@ COLUMN *create_column(char *title){
     }
     // Initialize column attributes
     col->title = title;
-    col->data = NULL;
+
     col->physical_size = 0;
     col->logical_sizes = 0;
+    col->data = NULL;
     return col;
 }
 
@@ -49,7 +53,8 @@ void print_col(COLUMN *col){
         return;
     }
     for(int i = 0; i < col->logical_sizes; i++){
-        printf("[%d] %d\n", i, col->data[i]);
+        int val = col->data[i];
+        printf("[%d] %d\n", i, val);
     }
 }
 
