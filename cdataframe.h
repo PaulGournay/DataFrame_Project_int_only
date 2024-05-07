@@ -14,7 +14,7 @@ void display_entire_dataframe(CDATAFRAME dataframe);
 void display_row_part_dataframe(CDATAFRAME dataframe,int row);
 void display_col_part_dataframe(CDATAFRAME dataframe,int col);
 void add_row(CDATAFRAME* dataframe);
-void delete_row(int** dataframe);
+void delete_row(CDATAFRAME* dataframe);
 void add_column(int* dataframe);
 void rename_col(int* dataframe);
 int test_val_in(int* dataframe);

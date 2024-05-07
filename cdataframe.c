@@ -89,3 +89,11 @@ void add_row(CDATAFRAME* dataframe){
         insert_value(dataframe->columns[i], val);
     }
 }
+void delete_row(CDATAFRAME* dataframe){
+    if (dataframe->columns[0]->logical_sizes == 0) {
+        printf("No rows to delete!\n");
+    }
+    for (int i = 0; i < dataframe->logical_size; i++) {
+        dataframe->columns[i]->logical_sizes--;
+    }
+}

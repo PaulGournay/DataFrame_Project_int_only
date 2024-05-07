@@ -46,6 +46,10 @@ int main() {
     display_row_part_dataframe(*df3,2);
     display_col_part_dataframe(*df3,2);
     add_row(df3);
+    printf("dataframe with new row\n");
+    display_entire_dataframe(*df3);
+    delete_row(df3);
+    printf("dataframe with last row deleted");
     display_entire_dataframe(*df3);
 
     return 0;
