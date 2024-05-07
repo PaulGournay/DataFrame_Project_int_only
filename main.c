@@ -31,7 +31,7 @@ int main() {
 
     // Free allocated memory
     delete_column(&mycol);
-    CDATAFRAME *df= create_dataframe("My column2");
+    CDATAFRAME *df= create_dataframe(3);
 
 
     return 0;

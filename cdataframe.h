@@ -2,10 +2,12 @@
 
 typedef struct {
     COLUMN **columns;
-    int num_columns;
+    int physical_size;
+    int logical_size;
 } CDATAFRAME;
-CDATAFRAME *create_dataframe(char *title);
-void fill_dataframe(int* dataframe);
+
+CDATAFRAME *create_dataframe(int size);
+void fill_dataframe_user(int* dataframe);
 void hard_fill_dataframe(int* dataframe);
 void display_entire_dataframe(int* dataframe);
 void display_row_part_dataframe(int* dataframe,int row);
