@@ -51,7 +51,7 @@ void OXO_fill_dataframe(CDATAFRAME* dataframe){
     for(int i=0;i<(dataframe)->logical_size;i++){
         for (int j = 0; j< 5; j++) {
 
-            insert_value(dataframe->columns[i], 1);
+            insert_value(dataframe->columns[i], j);
         }
     }
 }
@@ -94,6 +94,100 @@ void delete_row(CDATAFRAME* dataframe){
         printf("No rows to delete!\n");
     }
     for (int i = 0; i < dataframe->logical_size; i++) {
+        dataframe->columns[i]->data[i] = 0;
+        free(dataframe->columns[i]->data+i);
         dataframe->columns[i]->logical_sizes--;
     }
+}
+void add_column(CDATAFRAME* dataframe){
+    int val,len;
+    char *title=(char*)malloc(100*sizeof(char));
+    dataframe->physical_size++;
+    dataframe->logical_size++;
+    printf("\nenter the number of row in the new col:\n");
+    scanf("%d",&len);
+    printf("\ngive us a new title");
+    scanf("%s",title );
+    dataframe->columns[dataframe->logical_size-1] =create_column(title);
+
+    for (int j = 0; j< len; j++) {
+        printf("enter value at row : %d\n",j);
+        scanf("%d", &val);
+        insert_value(dataframe->columns[dataframe->logical_size-1], val);
+    }
+}
+void cdata_delete_column(CDATAFRAME* dataframe){
+    if(dataframe->logical_size == 0) {
+        printf("No columns to delete!\n");
+    }
+    else{
+        delete_column(&(dataframe->columns[dataframe->logical_size-1]));
+        dataframe->physical_size--;
+        dataframe->logical_size--;
+    }
+}
+void rename_col(CDATAFRAME * dataframe, int col){
+    char* new_title=(char*)malloc(100*sizeof(char));
+    printf("enter a new title for column %d",col);
+    scanf("%s",new_title);
+    dataframe->columns[col-1]->title=new_title;
+}
+int test_val_in(CDATAFRAME dataframe,int val){
+    for(int i=0;i<dataframe.logical_size;i++){
+        for(int j=0;j<dataframe.columns[i]->logical_sizes;j++){
+            if(dataframe.columns[i]->data[j]==val){
+                return 1;
+            }
+
+        }
+    }
+    return 0;
+}
+void replace_val(CDATAFRAME * dataframe,int col, int row,int val){
+    dataframe->columns[col]->data[row]=val;
+}
+void display_column_names(CDATAFRAME * dataframe){
+    printf("\n");
+    for(int i=0;i<dataframe->logical_size;i++){
+        printf("%s  ",dataframe->columns[i]->title);
+    }
+}
+int number_columns(CDATAFRAME dataframe){
+    return dataframe.physical_size;
+}
+int number_rows(CDATAFRAME dataframe){
+    return dataframe.columns[0]->logical_sizes;
+}
+int nb_cells_equal_to_x(CDATAFRAME dataframe, int x){
+    int cpt=0;
+    for(int i=0;i<dataframe.logical_size;i++){
+        for(int j=0;j<dataframe.columns[i]->logical_sizes;j++){
+            if(dataframe.columns[i]->data[j]==x){
+                cpt++;
+            }
+        }
+    }
+    return cpt;
+}
+int nb_cells_value_greater_than_x(CDATAFRAME dataframe, int x){
+    int cpt=0;
+    for(int i=0;i<dataframe.logical_size;i++){
+        for(int j=0;j<dataframe.columns[i]->logical_sizes;j++){
+            if(dataframe.columns[i]->data[j]>x){
+                cpt++;
+            }
+        }
+    }
+    return cpt;
+}
+int nb_cells_value_less_than_x(CDATAFRAME dataframe, int x){
+    int cpt=0;
+    for(int i=0;i<dataframe.logical_size;i++){
+        for(int j=0;j<dataframe.columns[i]->logical_sizes;j++){
+            if(dataframe.columns[i]->data[j]>x){
+                cpt++;
+            }
+        }
+    }
+    return cpt;
 }
