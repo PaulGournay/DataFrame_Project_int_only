@@ -45,6 +45,7 @@ int main() {
     CDATAFRAME *df3= create_dataframe(3);
     OXO_fill_dataframe(df3);
     display_entire_dataframe(*df3);
+    display_cdataframe_fancy(df3);
     /*display_row_part_dataframe(*df3,2);
     display_col_part_dataframe(*df3,2);
     add_row(df3);

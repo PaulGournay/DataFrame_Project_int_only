@@ -11,6 +11,7 @@ void fill_dataframe_user(CDATAFRAME* dataframe);
 void hard_fill_dataframe(CDATAFRAME* dataframe);
 void OXO_fill_dataframe(CDATAFRAME* dataframe);
 void display_entire_dataframe(CDATAFRAME dataframe);
+void display_cdataframe_fancy(CDATAFRAME* dataframe);
 void display_row_part_dataframe(CDATAFRAME dataframe,int row);
 void display_col_part_dataframe(CDATAFRAME dataframe,int col);
 void add_row(CDATAFRAME* dataframe);
@@ -26,3 +27,4 @@ int number_columns(CDATAFRAME dataframe);
 int nb_cells_equal_to_x(CDATAFRAME dataframe, int x);
 int nb_cells_value_greater_than_x(CDATAFRAME dataframe, int x);
 int nb_cells_value_less_than_x(CDATAFRAME dataframe, int x);
+void

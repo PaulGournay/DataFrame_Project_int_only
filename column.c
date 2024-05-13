@@ -18,6 +18,7 @@ COLUMN *create_column(char *title){
     col->physical_size = 0;
     col->logical_sizes = 0;
     col->data = NULL;
+    col->index = NULL;
     return col;
 }
 
@@ -26,11 +27,13 @@ int insert_value(COLUMN *col, int value) {
     if (col->data == NULL || col->logical_sizes == col->physical_size) {
         // Reallocate memory if necessary
         int *temp = (int *) realloc(col->data, (col->physical_size + REALLOC_SIZE) * sizeof(int));
+        int *temp2 = (int*) realloc(col->data,(col->physical_size + REALLOC_SIZE) * sizeof(int));
         if (temp == NULL) {
             printf("Memory allocation failed\n");
             return 0;
         }
         col->data = temp;
+        col->index = temp2;
         col->physical_size += REALLOC_SIZE;
     }
     // Insert the value and update logical size

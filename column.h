@@ -10,6 +10,7 @@ typedef struct {
     int* data;           // Array to hold integer-type data
     int physical_size;   // Physical size of the data array
     int logical_sizes;   // Logical size of the data array
+    int* index;          // Index of data(used in the sorting function)
 } COLUMN;
 
 // Function prototypes

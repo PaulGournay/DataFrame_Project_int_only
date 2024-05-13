@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "cdataframe.h"
 #include <time.h>
+
 CDATAFRAME *create_dataframe(int size){
 
     CDATAFRAME *cdataframe= (CDATAFRAME *)malloc(sizeof(CDATAFRAME));
@@ -32,6 +33,7 @@ void fill_dataframe_user(CDATAFRAME* dataframe){
         }
     }
 }
+
 void hard_fill_dataframe(CDATAFRAME* dataframe){
     int val;
     int len;
@@ -44,6 +46,7 @@ void hard_fill_dataframe(CDATAFRAME* dataframe){
         }
     }
 }
+
 void OXO_fill_dataframe(CDATAFRAME* dataframe){
     int val;
     int len;
@@ -64,6 +67,33 @@ void display_entire_dataframe(CDATAFRAME dataframe){
     }
 }
 
+void display_cdataframe_fancy(CDATAFRAME* dataframe){
+    int i, j;
+    // Display column titles
+    for (i = 0; i < dataframe -> logical_size; i++)
+    {
+        if (dataframe ->columns[i] != NULL)
+            printf("\t%s\t", dataframe -> columns[i] -> title);
+    }
+    printf("\n");
+    // Display data
+    for (i = 0; i < dataframe -> columns[0] -> logical_sizes; i++)
+    {
+        printf("[%d]", i);
+        for (j = 0; j < dataframe -> logical_size; j++)
+        {
+            if (dataframe -> columns[j] != NULL)
+            {
+                if (i < dataframe -> columns[j] -> logical_sizes)
+                    printf("\t%d\t", dataframe -> columns[j] -> data[i]);
+                else
+                    printf("\t\t"); // If data does not exist
+            }
+        }
+        printf("\n");
+    }
+}
+
 void display_row_part_dataframe(CDATAFRAME dataframe,int row) {
     printf("row %d: \n",row);
     for (int i = 0; i < dataframe.logical_size; i++) {
@@ -75,12 +105,14 @@ void display_row_part_dataframe(CDATAFRAME dataframe,int row) {
 
     }
 }
+
 void display_col_part_dataframe(CDATAFRAME dataframe,int col){
     printf("\n");
     printf("title : %s\n",dataframe.columns[col-1]->title);
     printf("\n");
     print_col(dataframe.columns[col-1]);
 }
+
 void add_row(CDATAFRAME* dataframe){
     int val=0;
     for (int i = 0; i < dataframe->logical_size; i++) {
@@ -89,6 +121,7 @@ void add_row(CDATAFRAME* dataframe){
         insert_value(dataframe->columns[i], val);
     }
 }
+
 void delete_row(CDATAFRAME* dataframe){
     if (dataframe->columns[0]->logical_sizes == 0) {
         printf("No rows to delete!\n");
@@ -99,6 +132,7 @@ void delete_row(CDATAFRAME* dataframe){
         dataframe->columns[i]->logical_sizes--;
     }
 }
+
 void add_column(CDATAFRAME* dataframe){
     int val,len;
     char *title=(char*)malloc(100*sizeof(char));
@@ -116,6 +150,7 @@ void add_column(CDATAFRAME* dataframe){
         insert_value(dataframe->columns[dataframe->logical_size-1], val);
     }
 }
+
 void cdata_delete_column(CDATAFRAME* dataframe){
     if(dataframe->logical_size == 0) {
         printf("No columns to delete!\n");
@@ -126,12 +161,14 @@ void cdata_delete_column(CDATAFRAME* dataframe){
         dataframe->logical_size--;
     }
 }
+
 void rename_col(CDATAFRAME * dataframe, int col){
     char* new_title=(char*)malloc(100*sizeof(char));
     printf("enter a new title for column %d",col);
     scanf("%s",new_title);
     dataframe->columns[col-1]->title=new_title;
 }
+
 int test_val_in(CDATAFRAME dataframe,int val){
     for(int i=0;i<dataframe.logical_size;i++){
         for(int j=0;j<dataframe.columns[i]->logical_sizes;j++){
@@ -143,21 +180,26 @@ int test_val_in(CDATAFRAME dataframe,int val){
     }
     return 0;
 }
+
 void replace_val(CDATAFRAME * dataframe,int col, int row,int val){
     dataframe->columns[col]->data[row]=val;
 }
+
 void display_column_names(CDATAFRAME * dataframe){
     printf("\n");
     for(int i=0;i<dataframe->logical_size;i++){
         printf("%s  ",dataframe->columns[i]->title);
     }
 }
+
 int number_columns(CDATAFRAME dataframe){
     return dataframe.physical_size;
 }
+
 int number_rows(CDATAFRAME dataframe){
     return dataframe.columns[0]->logical_sizes;
 }
+
 int nb_cells_equal_to_x(CDATAFRAME dataframe, int x){
     int cpt=0;
     for(int i=0;i<dataframe.logical_size;i++){
@@ -169,6 +211,7 @@ int nb_cells_equal_to_x(CDATAFRAME dataframe, int x){
     }
     return cpt;
 }
+
 int nb_cells_value_greater_than_x(CDATAFRAME dataframe, int x){
     int cpt=0;
     for(int i=0;i<dataframe.logical_size;i++){
@@ -180,6 +223,7 @@ int nb_cells_value_greater_than_x(CDATAFRAME dataframe, int x){
     }
     return cpt;
 }
+
 int nb_cells_value_less_than_x(CDATAFRAME dataframe, int x){
     int cpt=0;
     for(int i=0;i<dataframe.logical_size;i++){
