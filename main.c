@@ -3,7 +3,31 @@
 #include <time.h>
 #include <cdataframe.h>
 int main() {
-    // Create a new column
+
+    int column_types[] = {0, 0};
+    CDATAFRAME *df = load_from_csv("data.csv", column_types, 2);
+    if (df != NULL) {
+        printf("Loading data succced");
+        for (int i = 0; i < df->physical_size; i++) {
+            printf("Column %d: %s\n", i, df->columns[i]->title);
+        }
+
+
+        for (int j = 0; j < df->logical_size; j++) {
+            for (int i = 0; i < df->physical_size; i++) {
+                if (j < df->columns[i]->logical_size) {
+                    printf("%d ", df->columns[i]->data[j]);
+                }
+            }
+            printf("\n");
+        }
+
+
+    }
+    else{
+        printf("Error during the loading");
+        printf("\n");
+    }
 
     COLUMN *mycol = create_column("My column");
     srand(time(NULL));

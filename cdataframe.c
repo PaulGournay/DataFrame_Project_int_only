@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "cdataframe.h"
 #include <time.h>
 
@@ -234,4 +235,56 @@ int nb_cells_value_less_than_x(CDATAFRAME dataframe, int x){
         }
     }
     return cpt;
+}
+
+
+CDATAFRAME *load_from_csv(char *file_name, int *array, int size) {
+    FILE *file = fopen(file_name, "r");
+    if (file == NULL) {
+        perror("Unable to open file");
+        return NULL;
+    }
+
+    CDATAFRAME *dataframe = (CDATAFRAME*)malloc(sizeof(CDATAFRAME));
+    dataframe->columns = (COLUMN**)malloc(size * sizeof(COLUMN*));
+    dataframe->physical_size = size;
+    dataframe->logical_size = 0;
+
+    char line[1024];
+    if (fgets(line, sizeof(line), file)) {
+        char *token = strtok(line, ",");
+        for (int i = 0; i < size; i++) {
+            dataframe->columns[i] = (COLUMN*)malloc(sizeof(COLUMN));
+            dataframe->columns[i]->title = strdup(token);
+            dataframe->columns[i]->data = (int*)malloc(10 * sizeof(int));
+            dataframe->columns[i]->physical_size = 10;
+            dataframe->columns[i]->logical_sizes = 0;
+            dataframe->columns[i]->index = NULL;
+
+            token = strtok(NULL, ",");
+        }
+    }
+
+    while (fgets(line, sizeof(line), file)) {
+        char *token = strtok(line, ",");
+        for (int i = 0; i < size; i++) {
+            if (token != NULL) {
+                int value = atoi(token);
+                COLUMN *col = dataframe->columns[i];
+
+                if (col->logical_sizes >= col->physical_size) {
+                    col->physical_size *= 2;
+                    col->data = (int*)realloc(col->data, col->physical_size * sizeof(int));
+                }
+
+                col->data[col->logical_sizes++] = value;
+
+                token = strtok(NULL, ",");
+            }
+        }
+        dataframe->logical_size++;
+    }
+
+    fclose(file);
+    return dataframe;
 }
