@@ -74,8 +74,14 @@ void display_entire_dataframe(CDATAFRAME dataframe){
 
 // Function to display the dataframe in a formatted manner
 void display_cdataframe_fancy(CDATAFRAME* dataframe){
-    int i, j,max=0;
+    int i, j, max = 0;
 
+    // Find the column with the maximum number of rows
+    for (int a = 1; a < dataframe->logical_size; a++){
+        if(dataframe->columns[a]->logical_sizes > dataframe->columns[max]->logical_sizes){
+            max = a;
+        }
+    }
 
     // Display column titles
     for (i = 0; i < dataframe->logical_size; i++){
@@ -85,12 +91,6 @@ void display_cdataframe_fancy(CDATAFRAME* dataframe){
     printf("\n");
 
     // Display data row by row
-    for (int a = 0; a < dataframe->logical_size; a++){
-
-        if(dataframe->columns[a]->logical_sizes>max){
-            max=a;
-        }
-    }
     for (i = 0; i < dataframe->columns[max]->logical_sizes; i++){
         printf("[%d]", i);
         for (j = 0; j < dataframe->logical_size; j++){
