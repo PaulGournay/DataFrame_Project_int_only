@@ -21,7 +21,8 @@ CDataframe is a C library for managing and manipulating dataframes. It provides 
 13. **Statistic of number of columns and rows and names of columns**: Display the names of the columns and count of rows and columns.
 14. **Number of Cells Equal/Greater/Less to X**: Count the number of cells with values equal to, greater than, or less than a specified value.
 15. **Load DataFrame from CSV**: Load a dataframe from a CSV file.
-16. **Exit**: Exit the program.
+16. **Sort a column of your choice and display it in the right order: Sort a specified column of the dataframe and display it in the sorted order.
+17. **Exit: Exit the program.
 
 ## Usage
 
@@ -85,8 +86,8 @@ Here’s a list of important functions provided in the project:
 - `int nb_cells_equal_to_x(CDATAFRAME dataframe, int x);`
 - `int nb_cells_value_greater_than_x(CDATAFRAME dataframe, int x);`
 - `int nb_cells_value_less_than_x(CDATAFRAME dataframe, int x);`
+- `void sort_column(CDATAFRAME *cdataframe, int index);`
 - `CDATAFRAME *load_from_csv(char *file_name, int *array, int size);`
-
 #### Column Operations
 - `COLUMN *create_column(char *title);`
 - `int insert_value(COLUMN *col, int value);`
