@@ -32,33 +32,46 @@ The main interface of the program is a menu that allows the user to select from 
 ### Example Usage
 Here’s a brief example to get you started:
 
-1. **Creating a DataFrame**:
+1. **When you run the program you will see this menu**:
     ```c
-    CDATAFRAME *dataframe = create_dataframe(3);
-    fill_dataframe_user(dataframe);
-    display_entire_dataframe(*dataframe);
+    CDataframe Menu:
+   1. Create your own DataFrame
+   2. Fill DataFrame (Random Hard Fill)
+   3. Display DataFrame Fancy
+   4. Display Row of DataFrame
+   5. Display Column of DataFrame
+   6. Add Row to DataFrame
+   7. Add Column to DataFrame
+   8. Delete Row from DataFrame
+   9. Delete Column from DataFrame
+   10. Rename Column
+   11. Test Value in DataFrame
+   12. Replace Value in DataFrame
+   13. Statistic of number of columns and rows and names of columns
+   14. Number of Cells Equal/Greater/Less to X
+   15. Load DataFrame from CSV
+   16. Sort a column of your choice and display it in the right order
+   17. Exit
+       Enter your choice:
+       ```
+
+2. **You just have to chose what functionality you want to use**:
+    ```c
+    Example:
+    Enter your choice:13
+   Here are the columns' names:
+   name1  name2  name3
+   The number of rows: 6
+   The number of columns: 3
     ```
 
-2. **Filling DataFrame with Random Values**:
-    ```c
-    CDATAFRAME *dataframe = create_dataframe(3);
-    hard_fill_dataframe(dataframe);
-    display_entire_dataframe(*dataframe);
-    ```
+3. **Next the program ask you to enter another number to try other functionalities**:
 
-3. **Displaying DataFrame Fancy**:
+4. **Exit the program**:
     ```c
-    display_cdataframe_fancy(dataframe);
-    ```
-
-4. **Loading DataFrame from CSV**:
-    ```c
-    CDATAFRAME *dataframe = load_from_csv("data.csv", NULL, 3);
-    if (dataframe != NULL) {
-        display_entire_dataframe(*dataframe);
-    } else {
-        printf("Failed to load dataframe from CSV.\n");
-    }
+   17. Exit
+   Enter your choice:17
+   Thank you, come back soon.
     ```
 
 ### Functions
@@ -118,7 +131,6 @@ Ensure you have the following files in your project directory:
 - `cdataframe.c`
 - `column.h`
 - `column.c`
------------------------------------
-Enjoy working with CDataframe! If you encounter any issues, please feel free to open an issue on GitHub.
+------------------------------------------------------
 
 Link to the github: https://github.com/PaulGournay/DataFrame_Project_int_only.git

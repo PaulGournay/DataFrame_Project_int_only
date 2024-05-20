@@ -6,11 +6,11 @@
 
 // Structure for a column
 typedef struct {
-    char* title;         // Title of the column
-    int* data;           // Array to hold integer-type data
-    int physical_size;   // Physical size of the data array
-    int logical_sizes;   // Logical size of the data array
-    int* index;          // Index of data(used in the sorting function)
+    char* title; // Title of the column
+    int* data; // Array to hold integer-type data
+    int physical_size; // Physical size of the data array
+    int logical_sizes; // Logical size of the data array
+    int* index; // Index of data(used in the sorting function)
     int logical_size2;
 } COLUMN;
 

@@ -133,11 +133,11 @@ void print_index(COLUMN *col){
 }
 void print_col_sorted(COLUMN *col) {
     if (col == NULL || col->data == NULL || col->index == NULL) {
-        printf("Error: Column or data is NULL\n");
+        printf("Error\n");
         return;
     }
 
-    printf("Column '%s' data in sorted order:\n", col->title);
+    printf("Column '%s' sorted:\n", col->title);
     for (int i = 0; i < col->logical_size2; i++) {
         int index = col->index[i];
         printf("[%d] %d\n", index, col->data[index]);
