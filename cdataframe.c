@@ -284,7 +284,7 @@ CDATAFRAME *load_from_csv(char *file_name, int *array, int size) {
     CDATAFRAME *dataframe = (CDATAFRAME*)malloc(sizeof(CDATAFRAME));
     dataframe->columns = (COLUMN**)malloc(size * sizeof(COLUMN*));
     dataframe->physical_size = size;
-    dataframe->logical_size = 0;
+    dataframe->logical_size = size;
 
     char line[1024];
     if (fgets(line, sizeof(line), file)) {
@@ -318,7 +318,6 @@ CDATAFRAME *load_from_csv(char *file_name, int *array, int size) {
                 token = strtok(NULL, ",");
             }
         }
-        dataframe->logical_size++;
     }
 
     fclose(file);
