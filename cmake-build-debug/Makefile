@@ -176,30 +176,6 @@ column.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DataFrame_Project.dir\build.make CMakeFiles/DataFrame_Project.dir/column.c.s
 .PHONY : column.c.s
 
-functions.obj: functions.c.obj
-.PHONY : functions.obj
-
-# target to build an object file
-functions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DataFrame_Project.dir\build.make CMakeFiles/DataFrame_Project.dir/functions.c.obj
-.PHONY : functions.c.obj
-
-functions.i: functions.c.i
-.PHONY : functions.i
-
-# target to preprocess a source file
-functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DataFrame_Project.dir\build.make CMakeFiles/DataFrame_Project.dir/functions.c.i
-.PHONY : functions.c.i
-
-functions.s: functions.c.s
-.PHONY : functions.s
-
-# target to generate assembly for a file
-functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DataFrame_Project.dir\build.make CMakeFiles/DataFrame_Project.dir/functions.c.s
-.PHONY : functions.c.s
-
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -224,30 +200,6 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DataFrame_Project.dir\build.make CMakeFiles/DataFrame_Project.dir/main.c.s
 .PHONY : main.c.s
 
-test.obj: test.c.obj
-.PHONY : test.obj
-
-# target to build an object file
-test.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DataFrame_Project.dir\build.make CMakeFiles/DataFrame_Project.dir/test.c.obj
-.PHONY : test.c.obj
-
-test.i: test.c.i
-.PHONY : test.i
-
-# target to preprocess a source file
-test.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DataFrame_Project.dir\build.make CMakeFiles/DataFrame_Project.dir/test.c.i
-.PHONY : test.c.i
-
-test.s: test.c.s
-.PHONY : test.s
-
-# target to generate assembly for a file
-test.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DataFrame_Project.dir\build.make CMakeFiles/DataFrame_Project.dir/test.c.s
-.PHONY : test.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -263,15 +215,9 @@ help:
 	@echo ... column.obj
 	@echo ... column.i
 	@echo ... column.s
-	@echo ... functions.obj
-	@echo ... functions.i
-	@echo ... functions.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... test.obj
-	@echo ... test.i
-	@echo ... test.s
 .PHONY : help
 
 

@@ -88,16 +88,7 @@
 		<Unit filename="C:/Users/calam/CLionProjects/DataFrame_Project_int_only/column.h">
 			<Option target="DataFrame_Project"/>
 		</Unit>
-		<Unit filename="C:/Users/calam/CLionProjects/DataFrame_Project_int_only/functions.c">
-			<Option target="DataFrame_Project"/>
-		</Unit>
-		<Unit filename="C:/Users/calam/CLionProjects/DataFrame_Project_int_only/functions.h">
-			<Option target="DataFrame_Project"/>
-		</Unit>
 		<Unit filename="C:/Users/calam/CLionProjects/DataFrame_Project_int_only/main.c">
-			<Option target="DataFrame_Project"/>
-		</Unit>
-		<Unit filename="C:/Users/calam/CLionProjects/DataFrame_Project_int_only/test.c">
 			<Option target="DataFrame_Project"/>
 		</Unit>
 		<Unit filename="C:/Users/calam/CLionProjects/DataFrame_Project_int_only/CMakeLists.txt">

@@ -10,9 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/calam/CLionProjects/DataFrame_Project_int_only/cdataframe.c" "CMakeFiles/DataFrame_Project.dir/cdataframe.c.obj" "gcc" "CMakeFiles/DataFrame_Project.dir/cdataframe.c.obj.d"
   "C:/Users/calam/CLionProjects/DataFrame_Project_int_only/column.c" "CMakeFiles/DataFrame_Project.dir/column.c.obj" "gcc" "CMakeFiles/DataFrame_Project.dir/column.c.obj.d"
-  "C:/Users/calam/CLionProjects/DataFrame_Project_int_only/functions.c" "CMakeFiles/DataFrame_Project.dir/functions.c.obj" "gcc" "CMakeFiles/DataFrame_Project.dir/functions.c.obj.d"
   "C:/Users/calam/CLionProjects/DataFrame_Project_int_only/main.c" "CMakeFiles/DataFrame_Project.dir/main.c.obj" "gcc" "CMakeFiles/DataFrame_Project.dir/main.c.obj.d"
-  "C:/Users/calam/CLionProjects/DataFrame_Project_int_only/test.c" "CMakeFiles/DataFrame_Project.dir/test.c.obj" "gcc" "CMakeFiles/DataFrame_Project.dir/test.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
