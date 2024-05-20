@@ -16,9 +16,7 @@ void menu() {
     printf("10. Rename Column\n");
     printf("11. Test Value in DataFrame\n");
     printf("12. Replace Value in DataFrame\n");
-    printf("13. Display Column Names\n");
-    printf("13. Number of Columns\n");
-    printf("14. Number of Rows\n");
+    printf("13. statistic of number of columns and rows and names of columns");
     printf("19. Number of Cells Equal to X\n");
     printf("20. Number of Cells Greater Than X\n");
     printf("21. Number of Cells Less Than X\n");
@@ -179,9 +177,19 @@ int main() {
                 printf("\n");
                 break;
             case 13:
+                printf("here is the columns' names :");
+                printf("\n");
+                display_column_names(hardfill);
+                printf("The number of row : %d", number_rows(*hardfill));
+                printf("\n");
+                printf("The number of column : %d", number_columns(*hardfill));
 
 
 
+
+                printf("Invalid choice! Please try again.\n");
+                scanf("%d",&r);
+                printf("\n");
 
 
             default:
@@ -189,6 +197,9 @@ int main() {
                 scanf("%d",&r);
                 printf("\n");
                 break;
+
+
+
         }
 
     }
