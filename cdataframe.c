@@ -120,16 +120,56 @@ void add_row(CDATAFRAME* dataframe){
     }
 }
 
-void delete_row(CDATAFRAME* dataframe){
-    if (dataframe->columns[0]->logical_sizes == 0) {
-        printf("No rows to delete!\n");
+void delete_row(CDATAFRAME* dataframe) {
+    int r;
+    printf("Which row do you want to delete: ");
+    scanf("%d", &r);
+    r -= 1;  // Convert to zero-based index
+
+    // Check if the row index is valid
+    if (r < 0 || r >= dataframe->columns[0]->logical_sizes) {
+        printf("Invalid row number.\n");
+        return;
     }
+
+    // Iterate over each column to delete the row
     for (int i = 0; i < dataframe->logical_size; i++) {
-        dataframe->columns[i]->data[i] = 0;
-        free(dataframe->columns[i]->data+i);
-        dataframe->columns[i]->logical_sizes--;
+        COLUMN *col = dataframe->columns[i];
+
+        // Shift data to the left to fill the gap
+        for (int j = r; j < col->logical_sizes - 1; j++) {
+            col->data[j] = col->data[j + 1];
+        }
+
+        // Decrease logical size of the column
+        col->logical_sizes--;
+
+        // Optionally shrink the array if there's a lot of unused space
+        if (col->physical_size - col->logical_sizes >= REALLOC_SIZE) {
+            col->physical_size -= REALLOC_SIZE;
+            col->data = realloc(col->data, col->physical_size * sizeof(int));
+        }
     }
+
+    printf("Row %d deleted.\n", r + 1);
 }
+void delete_column1(CDATAFRAME* dataframe) {
+    int c;
+    printf("Which column do you want to delete: ");
+    scanf("%d", &c);
+    c -= 1;
+    if (c < 0 || c >= dataframe->logical_size) {
+        printf("Invalid column number.\n");
+        return;
+    }
+    delete_column(&(dataframe->columns[c]));
+    for (int i = c; i < dataframe->logical_size - 1; i++) {
+        dataframe->columns[i] = dataframe->columns[i + 1];
+    }
+    dataframe->logical_size--;
+    printf("Column %d deleted.\n", c + 1);
+}
+
 
 void add_column(CDATAFRAME* dataframe){
     int val,len;
@@ -167,16 +207,15 @@ void rename_col(CDATAFRAME * dataframe, int col){
     dataframe->columns[col-1]->title=new_title;
 }
 
-int test_val_in(CDATAFRAME dataframe,int val){
+void test_val_in(CDATAFRAME dataframe,int val){
     for(int i=0;i<dataframe.logical_size;i++){
         for(int j=0;j<dataframe.columns[i]->logical_sizes;j++){
             if(dataframe.columns[i]->data[j]==val){
-                return 1;
+                printf("the value has been found here : [%d;%d] \n", i, j);
             }
 
         }
     }
-    return 0;
 }
 
 void replace_val(CDATAFRAME * dataframe,int col, int row,int val){

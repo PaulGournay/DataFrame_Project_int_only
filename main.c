@@ -9,16 +9,16 @@ void menu() {
     printf("3. Display DataFrame Fancy\n");
     printf("4. Display Row of DataFrame\n");
     printf("5. Display Column of DataFrame\n");
-    printf("9. Add Row to DataFrame\n");
-    printf("10. Delete Row from DataFrame\n");
-    printf("11. Add Column to DataFrame\n");
-    printf("12. Delete Column from DataFrame\n");
-    printf("13. Rename Column\n");
-    printf("14. Test Value in DataFrame\n");
-    printf("15. Replace Value in DataFrame\n");
-    printf("16. Display Column Names\n");
-    printf("17. Number of Columns\n");
-    printf("18. Number of Rows\n");
+    printf("6. Add Row to DataFrame\n");
+    printf("7. Add Column to DataFrame\n");
+    printf("8. Delete Row from DataFrame\n");
+    printf("9. Delete Column from DataFrame\n");
+    printf("10. Rename Column\n");
+    printf("11. Test Value in DataFrame\n");
+    printf("12. Replace Value in DataFrame\n");
+    printf("13. Display Column Names\n");
+    printf("13. Number of Columns\n");
+    printf("14. Number of Rows\n");
     printf("19. Number of Cells Equal to X\n");
     printf("20. Number of Cells Greater Than X\n");
     printf("21. Number of Cells Less Than X\n");
@@ -102,6 +102,83 @@ int main() {
                 scanf("%d",&r);
                 printf("\n");
                 break;
+            case 6 :
+                printf("let's add a row in your dataframe");
+                printf("\n");
+                add_row(hardfill);
+                display_cdataframe_fancy(hardfill);
+
+
+                printf("input any number to continue...\n");
+                scanf("%d",&r);
+                printf("\n");
+            case 7:
+                printf("let's add a column in your dataframe");
+                printf("\n");
+                add_column(hardfill);
+                display_cdataframe_fancy(hardfill);
+
+
+                printf("input any number to continue...\n");
+                scanf("%d",&r);
+                printf("\n");
+            case 8 :
+                printf("let's delete a row in your dataframe");
+                printf("\n");
+                delete_row(hardfill);
+                display_cdataframe_fancy(hardfill);
+
+
+                printf("input any number to continue...\n");
+                scanf("%d",&r);
+                printf("\n");
+            case 9 :
+                printf("let's delete a column in your dataframe");
+                printf("\n");
+                delete_column1(hardfill);
+                display_cdataframe_fancy(hardfill);
+
+
+                printf("input any number to continue...\n");
+                scanf("%d",&r);
+                printf("\n");
+            case 10:
+                printf("let's rename a column");
+                printf("\n");
+                printf("Which colunm do you want to rename\n");
+                scanf("%d", &r);
+                rename_col(hardfill,r);
+                display_cdataframe_fancy(hardfill);
+
+
+                printf("input any number to continue...\n");
+                scanf("%d",&r);
+                printf("\n");
+            case 11:
+                printf("let's test a value in your dataframe");
+                printf("\n");
+                printf("Which value do you want to test\n");
+                scanf("%d", &r);
+                test_val_in(*hardfill,r);
+
+
+
+
+
+                printf("input any number to continue...\n");
+                scanf("%d",&r);
+                printf("\n");
+            case 12:
+                printf("Give me the col the row of the value that you want to replace and finally the value by which you'll replace");
+                scanf("%d %d %d",&col,&row,&val);
+                replace_val(hardfill,col,row,val);
+                display_cdataframe_fancy(hardfill);
+
+                printf("Invalid choice! Please try again.\n");
+                scanf("%d",&r);
+                printf("\n");
+                break;
+            case 13:
 
 
 
