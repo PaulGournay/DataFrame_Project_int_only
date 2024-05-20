@@ -17,11 +17,9 @@ void menu() {
     printf("11. Test Value in DataFrame\n");
     printf("12. Replace Value in DataFrame\n");
     printf("13. statistic of number of columns and rows and names of columns");
-    printf("19. Number of Cells Equal to X\n");
-    printf("20. Number of Cells Greater Than X\n");
-    printf("21. Number of Cells Less Than X\n");
-    printf("22. Load DataFrame from CSV\n");
-    printf("23. Exit\n");
+    printf("14. Number of Cells Equal/Greater/Less to X\n");
+    printf("15. Load DataFrame from CSV\n");
+    printf("16. Exit\n");
 }
 
 int main() {
@@ -185,11 +183,11 @@ int main() {
                 printf("The number of column : %d", number_columns(*hardfill));
 
 
-
-
                 printf("Invalid choice! Please try again.\n");
                 scanf("%d",&r);
                 printf("\n");
+            case 14:
+
 
 
             default:
