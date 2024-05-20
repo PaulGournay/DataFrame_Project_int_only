@@ -28,4 +28,5 @@ int number_columns(CDATAFRAME dataframe);
 int nb_cells_equal_to_x(CDATAFRAME dataframe, int x);
 int nb_cells_value_greater_than_x(CDATAFRAME dataframe, int x);
 int nb_cells_value_less_than_x(CDATAFRAME dataframe, int x);
+void sort_column(CDATAFRAME *cdataframe, int index);
 CDATAFRAME *load_from_csv(char *file_name, int *array, int size);

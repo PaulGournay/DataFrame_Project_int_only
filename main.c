@@ -19,7 +19,8 @@ void menu() {
     printf("13. Statistic of number of columns and rows and names of columns\n");
     printf("14. Number of Cells Equal/Greater/Less to X\n");
     printf("15. Load DataFrame from CSV\n");
-    printf("16. Exit\n");
+    printf("16. Sort a column of your choice and display it in the right order\n");
+    printf("17. Exit\n");
 }
 
 int main() {
@@ -204,7 +205,16 @@ int main() {
                 scanf("%d", &r);
                 printf("\n");
                 break;
-            case 16: // Exit
+
+            case 16:
+                printf("Wich column you want to sort (enter the index not the title)");
+                int index;
+                scanf("%d",&index);
+                sort_column(hardfill,index);
+                print_col_sorted(hardfill->columns[index]);
+                break;
+
+            case 17: // Exit
                 printf("Thank you, come back soon.\n");
                 return 0;
 

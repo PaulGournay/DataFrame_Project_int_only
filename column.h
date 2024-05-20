@@ -11,7 +11,7 @@ typedef struct {
     int physical_size;   // Physical size of the data array
     int logical_sizes;   // Logical size of the data array
     int* index;          // Index of data(used in the sorting function)
-    int logical_size;
+    int logical_size2;
 } COLUMN;
 
 // Function prototypes
@@ -24,5 +24,6 @@ int get_index_val(COLUMN *col,int index);
 int nb_val_lower_than_x(COLUMN *col,int val);
 int nb_val_greater_than_x(COLUMN *col,int val);
 int count_value(COLUMN *col,int val);
-
+void print_index(COLUMN *col);
+void print_col_sorted(COLUMN *col);
 #endif

@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2023.3.3\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2023.3.3\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3
+CMAKE_SOURCE_DIR = C:\Users\calam\CLionProjects\DataFrame_Project_int_only
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\calam\CLionProjects\DataFrame_Project_int_only\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/DataFrame_Project.dir/depend.make
@@ -70,78 +70,78 @@ include CMakeFiles/DataFrame_Project.dir/flags.make
 
 CMakeFiles/DataFrame_Project.dir/functions.c.obj: CMakeFiles/DataFrame_Project.dir/flags.make
 CMakeFiles/DataFrame_Project.dir/functions.c.obj: CMakeFiles/DataFrame_Project.dir/includes_C.rsp
-CMakeFiles/DataFrame_Project.dir/functions.c.obj: C:/Users/Vrejk/CLionProjects/DataFrame_Project_int_only3/functions.c
+CMakeFiles/DataFrame_Project.dir/functions.c.obj: C:/Users/calam/CLionProjects/DataFrame_Project_int_only/functions.c
 CMakeFiles/DataFrame_Project.dir/functions.c.obj: CMakeFiles/DataFrame_Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/DataFrame_Project.dir/functions.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DataFrame_Project.dir/functions.c.obj -MF CMakeFiles\DataFrame_Project.dir\functions.c.obj.d -o CMakeFiles\DataFrame_Project.dir\functions.c.obj -c C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\calam\CLionProjects\DataFrame_Project_int_only\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/DataFrame_Project.dir/functions.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DataFrame_Project.dir/functions.c.obj -MF CMakeFiles\DataFrame_Project.dir\functions.c.obj.d -o CMakeFiles\DataFrame_Project.dir\functions.c.obj -c C:\Users\calam\CLionProjects\DataFrame_Project_int_only\functions.c
 
 CMakeFiles/DataFrame_Project.dir/functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/DataFrame_Project.dir/functions.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\functions.c > CMakeFiles\DataFrame_Project.dir\functions.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\calam\CLionProjects\DataFrame_Project_int_only\functions.c > CMakeFiles\DataFrame_Project.dir\functions.c.i
 
 CMakeFiles/DataFrame_Project.dir/functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/DataFrame_Project.dir/functions.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\functions.c -o CMakeFiles\DataFrame_Project.dir\functions.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\calam\CLionProjects\DataFrame_Project_int_only\functions.c -o CMakeFiles\DataFrame_Project.dir\functions.c.s
 
 CMakeFiles/DataFrame_Project.dir/main.c.obj: CMakeFiles/DataFrame_Project.dir/flags.make
 CMakeFiles/DataFrame_Project.dir/main.c.obj: CMakeFiles/DataFrame_Project.dir/includes_C.rsp
-CMakeFiles/DataFrame_Project.dir/main.c.obj: C:/Users/Vrejk/CLionProjects/DataFrame_Project_int_only3/main.c
+CMakeFiles/DataFrame_Project.dir/main.c.obj: C:/Users/calam/CLionProjects/DataFrame_Project_int_only/main.c
 CMakeFiles/DataFrame_Project.dir/main.c.obj: CMakeFiles/DataFrame_Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/DataFrame_Project.dir/main.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DataFrame_Project.dir/main.c.obj -MF CMakeFiles\DataFrame_Project.dir\main.c.obj.d -o CMakeFiles\DataFrame_Project.dir\main.c.obj -c C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\calam\CLionProjects\DataFrame_Project_int_only\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/DataFrame_Project.dir/main.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DataFrame_Project.dir/main.c.obj -MF CMakeFiles\DataFrame_Project.dir\main.c.obj.d -o CMakeFiles\DataFrame_Project.dir\main.c.obj -c C:\Users\calam\CLionProjects\DataFrame_Project_int_only\main.c
 
 CMakeFiles/DataFrame_Project.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/DataFrame_Project.dir/main.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\main.c > CMakeFiles\DataFrame_Project.dir\main.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\calam\CLionProjects\DataFrame_Project_int_only\main.c > CMakeFiles\DataFrame_Project.dir\main.c.i
 
 CMakeFiles/DataFrame_Project.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/DataFrame_Project.dir/main.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\main.c -o CMakeFiles\DataFrame_Project.dir\main.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\calam\CLionProjects\DataFrame_Project_int_only\main.c -o CMakeFiles\DataFrame_Project.dir\main.c.s
 
 CMakeFiles/DataFrame_Project.dir/column.c.obj: CMakeFiles/DataFrame_Project.dir/flags.make
 CMakeFiles/DataFrame_Project.dir/column.c.obj: CMakeFiles/DataFrame_Project.dir/includes_C.rsp
-CMakeFiles/DataFrame_Project.dir/column.c.obj: C:/Users/Vrejk/CLionProjects/DataFrame_Project_int_only3/column.c
+CMakeFiles/DataFrame_Project.dir/column.c.obj: C:/Users/calam/CLionProjects/DataFrame_Project_int_only/column.c
 CMakeFiles/DataFrame_Project.dir/column.c.obj: CMakeFiles/DataFrame_Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/DataFrame_Project.dir/column.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DataFrame_Project.dir/column.c.obj -MF CMakeFiles\DataFrame_Project.dir\column.c.obj.d -o CMakeFiles\DataFrame_Project.dir\column.c.obj -c C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\column.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\calam\CLionProjects\DataFrame_Project_int_only\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/DataFrame_Project.dir/column.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DataFrame_Project.dir/column.c.obj -MF CMakeFiles\DataFrame_Project.dir\column.c.obj.d -o CMakeFiles\DataFrame_Project.dir\column.c.obj -c C:\Users\calam\CLionProjects\DataFrame_Project_int_only\column.c
 
 CMakeFiles/DataFrame_Project.dir/column.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/DataFrame_Project.dir/column.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\column.c > CMakeFiles\DataFrame_Project.dir\column.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\calam\CLionProjects\DataFrame_Project_int_only\column.c > CMakeFiles\DataFrame_Project.dir\column.c.i
 
 CMakeFiles/DataFrame_Project.dir/column.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/DataFrame_Project.dir/column.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\column.c -o CMakeFiles\DataFrame_Project.dir\column.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\calam\CLionProjects\DataFrame_Project_int_only\column.c -o CMakeFiles\DataFrame_Project.dir\column.c.s
 
 CMakeFiles/DataFrame_Project.dir/test.c.obj: CMakeFiles/DataFrame_Project.dir/flags.make
 CMakeFiles/DataFrame_Project.dir/test.c.obj: CMakeFiles/DataFrame_Project.dir/includes_C.rsp
-CMakeFiles/DataFrame_Project.dir/test.c.obj: C:/Users/Vrejk/CLionProjects/DataFrame_Project_int_only3/test.c
+CMakeFiles/DataFrame_Project.dir/test.c.obj: C:/Users/calam/CLionProjects/DataFrame_Project_int_only/test.c
 CMakeFiles/DataFrame_Project.dir/test.c.obj: CMakeFiles/DataFrame_Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/DataFrame_Project.dir/test.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DataFrame_Project.dir/test.c.obj -MF CMakeFiles\DataFrame_Project.dir\test.c.obj.d -o CMakeFiles\DataFrame_Project.dir\test.c.obj -c C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\calam\CLionProjects\DataFrame_Project_int_only\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/DataFrame_Project.dir/test.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DataFrame_Project.dir/test.c.obj -MF CMakeFiles\DataFrame_Project.dir\test.c.obj.d -o CMakeFiles\DataFrame_Project.dir\test.c.obj -c C:\Users\calam\CLionProjects\DataFrame_Project_int_only\test.c
 
 CMakeFiles/DataFrame_Project.dir/test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/DataFrame_Project.dir/test.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\test.c > CMakeFiles\DataFrame_Project.dir\test.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\calam\CLionProjects\DataFrame_Project_int_only\test.c > CMakeFiles\DataFrame_Project.dir\test.c.i
 
 CMakeFiles/DataFrame_Project.dir/test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/DataFrame_Project.dir/test.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\test.c -o CMakeFiles\DataFrame_Project.dir\test.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\calam\CLionProjects\DataFrame_Project_int_only\test.c -o CMakeFiles\DataFrame_Project.dir\test.c.s
 
 CMakeFiles/DataFrame_Project.dir/cdataframe.c.obj: CMakeFiles/DataFrame_Project.dir/flags.make
 CMakeFiles/DataFrame_Project.dir/cdataframe.c.obj: CMakeFiles/DataFrame_Project.dir/includes_C.rsp
-CMakeFiles/DataFrame_Project.dir/cdataframe.c.obj: C:/Users/Vrejk/CLionProjects/DataFrame_Project_int_only3/cdataframe.c
+CMakeFiles/DataFrame_Project.dir/cdataframe.c.obj: C:/Users/calam/CLionProjects/DataFrame_Project_int_only/cdataframe.c
 CMakeFiles/DataFrame_Project.dir/cdataframe.c.obj: CMakeFiles/DataFrame_Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/DataFrame_Project.dir/cdataframe.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DataFrame_Project.dir/cdataframe.c.obj -MF CMakeFiles\DataFrame_Project.dir\cdataframe.c.obj.d -o CMakeFiles\DataFrame_Project.dir\cdataframe.c.obj -c C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\cdataframe.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\calam\CLionProjects\DataFrame_Project_int_only\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/DataFrame_Project.dir/cdataframe.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DataFrame_Project.dir/cdataframe.c.obj -MF CMakeFiles\DataFrame_Project.dir\cdataframe.c.obj.d -o CMakeFiles\DataFrame_Project.dir\cdataframe.c.obj -c C:\Users\calam\CLionProjects\DataFrame_Project_int_only\cdataframe.c
 
 CMakeFiles/DataFrame_Project.dir/cdataframe.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/DataFrame_Project.dir/cdataframe.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\cdataframe.c > CMakeFiles\DataFrame_Project.dir\cdataframe.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\calam\CLionProjects\DataFrame_Project_int_only\cdataframe.c > CMakeFiles\DataFrame_Project.dir\cdataframe.c.i
 
 CMakeFiles/DataFrame_Project.dir/cdataframe.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/DataFrame_Project.dir/cdataframe.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\cdataframe.c -o CMakeFiles\DataFrame_Project.dir\cdataframe.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\calam\CLionProjects\DataFrame_Project_int_only\cdataframe.c -o CMakeFiles\DataFrame_Project.dir\cdataframe.c.s
 
 # Object files for target DataFrame_Project
 DataFrame_Project_OBJECTS = \
@@ -163,7 +163,7 @@ DataFrame_Project.exe: CMakeFiles/DataFrame_Project.dir/build.make
 DataFrame_Project.exe: CMakeFiles/DataFrame_Project.dir/linkLibs.rsp
 DataFrame_Project.exe: CMakeFiles/DataFrame_Project.dir/objects1.rsp
 DataFrame_Project.exe: CMakeFiles/DataFrame_Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable DataFrame_Project.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\calam\CLionProjects\DataFrame_Project_int_only\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable DataFrame_Project.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\DataFrame_Project.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -175,6 +175,6 @@ CMakeFiles/DataFrame_Project.dir/clean:
 .PHONY : CMakeFiles/DataFrame_Project.dir/clean
 
 CMakeFiles/DataFrame_Project.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3 C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3 C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\cmake-build-debug C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\cmake-build-debug C:\Users\Vrejk\CLionProjects\DataFrame_Project_int_only3\cmake-build-debug\CMakeFiles\DataFrame_Project.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\calam\CLionProjects\DataFrame_Project_int_only C:\Users\calam\CLionProjects\DataFrame_Project_int_only C:\Users\calam\CLionProjects\DataFrame_Project_int_only\cmake-build-debug C:\Users\calam\CLionProjects\DataFrame_Project_int_only\cmake-build-debug C:\Users\calam\CLionProjects\DataFrame_Project_int_only\cmake-build-debug\CMakeFiles\DataFrame_Project.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/DataFrame_Project.dir/depend
 

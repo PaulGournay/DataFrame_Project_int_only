@@ -17,6 +17,7 @@ COLUMN *create_column(char *title){
 
     col->physical_size = 0;
     col->logical_sizes = 0;
+    col->logical_size2 = 0;
     col->data = NULL;
     col->index = NULL;
     return col;
@@ -37,6 +38,8 @@ int insert_value(COLUMN *col, int value) {
         col->physical_size += REALLOC_SIZE;
     }
     // Insert the value and update logical size
+    col->index[col->logical_size2] = col->logical_size2;
+    col->logical_size2++;
     col->data[col->logical_sizes++] = value;
     return 1;
 }
@@ -120,4 +123,23 @@ int count_value(COLUMN *col, int val){
         }
     }
     return cpt;
+}
+
+void print_index(COLUMN *col){
+    for(int i=0;i<col->logical_size2;i++){
+        printf("%d",col[0].index[i]);
+    }
+    printf("\n");
+}
+void print_col_sorted(COLUMN *col) {
+    if (col == NULL || col->data == NULL || col->index == NULL) {
+        printf("Error: Column or data is NULL\n");
+        return;
+    }
+
+    printf("Column '%s' data in sorted order:\n", col->title);
+    for (int i = 0; i < col->logical_size2; i++) {
+        int index = col->index[i];
+        printf("[%d] %d\n", index, col->data[index]);
+    }
 }
