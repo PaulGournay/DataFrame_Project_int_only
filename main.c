@@ -1,94 +1,121 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
-#include <cdataframe.h>
+#include <stdlib.h>
+#include "cdataframe.h"
+
+void menu() {
+    printf("CDataframe Menu:\n");
+    printf("1. Create your own DataFrame\n");
+    printf("2. Fill DataFrame (Random Hard Fill)\n");
+    printf("3. Display DataFrame Fancy\n");
+    printf("4. Display Row of DataFrame\n");
+    printf("5. Display Column of DataFrame\n");
+    printf("9. Add Row to DataFrame\n");
+    printf("10. Delete Row from DataFrame\n");
+    printf("11. Add Column to DataFrame\n");
+    printf("12. Delete Column from DataFrame\n");
+    printf("13. Rename Column\n");
+    printf("14. Test Value in DataFrame\n");
+    printf("15. Replace Value in DataFrame\n");
+    printf("16. Display Column Names\n");
+    printf("17. Number of Columns\n");
+    printf("18. Number of Rows\n");
+    printf("19. Number of Cells Equal to X\n");
+    printf("20. Number of Cells Greater Than X\n");
+    printf("21. Number of Cells Less Than X\n");
+    printf("22. Load DataFrame from CSV\n");
+    printf("23. Exit\n");
+}
+
 int main() {
 
-    int column_types[] = {0, 0};
-    CDATAFRAME *df = load_from_csv("data.csv", column_types, 2);
-    if (df != NULL) {
-        printf("Loading data succced");
-        for (int i = 0; i < df->physical_size; i++) {
-            printf("Column %d: %s\n", i, df->columns[i]->title);
-        }
 
+    int choice, col, row, val, size, x,r;
+    char filename[256];
+    printf("Let's firstly create a random Cdataframe  in order to test the functions\n ");
+    CDATAFRAME *hardfill = create_dataframe(3);
+    hard_fill_dataframe(hardfill);
 
-        for (int j = 0; j < df->logical_size; j++) {
-            for (int i = 0; i < df->physical_size; i++) {
-                if (j < df->columns[i]->logical_size) {
-                    printf("%d ", df->columns[i]->data[j]);
-                }
-            }
-            printf("\n");
-        }
-
-
-    }
-    else{
-        printf("Error during the loading");
-        printf("\n");
-    }
-
-    COLUMN *mycol = create_column("My column");
-    srand(time(NULL));
-    // Insert values into the column
-    insert_value(mycol, 52);
-    insert_value(mycol, 44);
-    insert_value(mycol, 18);
-    insert_value(mycol, 15);
-    insert_value(mycol, 15);
-
-    // Print the column data
-    print_col(mycol);
-
-    // Find the occurrence of a value
-    int val = 15;
-    int val2=1;
-    printf("The occurrence of %d is %d\n", val, occurence_val(mycol, val));
-
-    // Get value at a specific index
-    int index = 2;
-    printf("At index %d we have the value: %d\n", index, get_index_val(mycol, index));
-
-    // Count the number of values greater than and lower than a certain value
-    int x = 20;
-    printf("There are %d values greater than %d\n", nb_val_greater_than_x(mycol, x), x);
-    printf("There are %d values lower than %d\n", nb_val_lower_than_x(mycol, x));
-
-    // Free allocated memory
-    delete_column(&mycol);
-    /*CDATAFRAME *df= create_dataframe(3);
-    fill_dataframe_user(df );
-    display_entire_dataframe(*df);
+    display_cdataframe_fancy(hardfill);
+    printf("input any number to continue...\n");
+    scanf("%d",&r);
     printf("\n");
-    display_row_part_dataframe(*df,2);
-    display_col_part_dataframe(*df,2);*/
-    /*CDATAFRAME *df2= create_dataframe(5);
-    hard_fill_dataframe(df2);
-    display_entire_dataframe(*df2);*/
-    CDATAFRAME *df3= create_dataframe(3);
-    OXO_fill_dataframe(df3);
-    display_entire_dataframe(*df3);
-    display_cdataframe_fancy(df3);
-    /*display_row_part_dataframe(*df3,2);
-    display_col_part_dataframe(*df3,2);
-    add_row(df3);
-    printf("dataframe with new row\n");
-    display_entire_dataframe(*df3);
-    delete_row(df3);
-    printf("dataframe with last row deleted");
-    display_entire_dataframe(*df3);
-    add_column(df3);
-    display_entire_dataframe(*df3);
-    cdata_delete_column(df3);
-    printf("\nafter column deleted :\n");
-    display_entire_dataframe(*df3);
-    rename_col(df3,2);
-    replace_val(df3,1,1,654);
-    display_entire_dataframe(*df3);
-    display_column_names(df3);*/
-    printf("\nnbcol=%d,nbrow=%d", number_columns(*df3), number_rows(*df3));
-    printf("\nthere is %d times the value %d in the cdataaframe", nb_cells_equal_to_x(*df3,val2),val2);
+
+    while (1) {
+        menu();
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+
+            case 1: // Create your own DataFrame
+
+                printf("how many column do you want for your CDATAFRAME");
+                scanf("%d", &size);
+                CDATAFRAME *dataframe = create_dataframe(size);
+                fill_dataframe_user(dataframe);
+                display_entire_dataframe(*dataframe);
+                printf("input any number to continue...\n");
+                scanf("%d",&r);
+                printf("\n");
+                break;
+            case 2 :
+
+
+                printf("let's hard fill an ohter CDATAFRAME\n");
+                printf("how many column do you want for your CDATAFRAME");
+                scanf("%d", &r);
+                CDATAFRAME *hardfill1 = create_dataframe(r);
+                hard_fill_dataframe(hardfill1);
+
+                display_entire_dataframe(*hardfill1);
+                printf("input any number to continue...\n");
+                scanf("%d",&r);
+                printf("\n");
+                break;
+            case 3 :
+                display_cdataframe_fancy(hardfill);
+                printf("input any number to continue...\n");
+                scanf("%d",&r);
+                printf("\n");
+                break;
+            case 4:
+                printf("Which row do you want to display\n");
+                scanf("%d", &r);
+                display_row_part_dataframe(*hardfill,r);
+                printf("\n");
+
+
+
+                printf("input any number to continue...\n");
+                scanf("%d",&r);
+                printf("\n");
+                break;
+            case 5:
+                printf("Which colunm do you want to display\n");
+                scanf("%d", &r);
+                display_col_part_dataframe(*hardfill,r);
+                printf("\n");
+
+
+
+                printf("input any number to continue...\n");
+                scanf("%d",&r);
+                printf("\n");
+                break;
+
+
+
+
+
+            default:
+                printf("Invalid choice! Please try again.\n");
+                scanf("%d",&r);
+                printf("\n");
+                break;
+        }
+
+    }
+
 
     return 0;
 }

@@ -26,8 +26,6 @@ void fill_dataframe_user(CDATAFRAME* dataframe){
     for(int i=0;i<(dataframe)->logical_size;i++){
         printf("how many rows do you want for the %d columns", i);
         scanf("%d",&len);
-
-
         for (int j = 0; j<len; j++) {
             scanf("%d", &val);
             insert_value(dataframe->columns[i], val);
@@ -40,9 +38,8 @@ void hard_fill_dataframe(CDATAFRAME* dataframe){
     int len;
     char* title;
     srand(time(NULL));
-    for(int i=0;i<(dataframe)->logical_size;i++){
-        for (int j = 0; j< rand() % 11; j++) {
-
+    for(int i=0;i<((dataframe)->logical_size);i++){
+        for (int j = 0; j< (rand() % 11) +1 ; j++) {
             insert_value(dataframe->columns[i], rand() % 11);
         }
     }
@@ -238,7 +235,7 @@ int nb_cells_value_less_than_x(CDATAFRAME dataframe, int x){
 }
 
 
-CDATAFRAME *load_from_csv(char *file_name, int *array, int size) {
+/*CDATAFRAME *load_from_csv(char *file_name, int *array, int size) {
     FILE *file = fopen(file_name, "r");
     if (file == NULL) {
         perror("Unable to open file");
@@ -287,4 +284,4 @@ CDATAFRAME *load_from_csv(char *file_name, int *array, int size) {
 
     fclose(file);
     return dataframe;
-}
+}*/
