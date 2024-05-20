@@ -187,8 +187,24 @@ int main() {
                 scanf("%d",&r);
                 printf("\n");
             case 14:
+                printf("Which value do you want to test\n");
+                scanf("%d", &r);
+                printf("the number of cells less than %d : %d",r,nb_cells_value_less_than_x(*hardfill,r));
+                printf("\n");
+                printf("the number of cells less than %d : %d",r,nb_cells_equal_to_x(*hardfill,r));
+                printf("\n");
+                printf("the number of cells less than %d : %d",r,nb_cells_value_greater_than_x(*hardfill,r));
+
+                printf("Invalid choice! Please try again.\n");
+                scanf("%d",&r);
+                printf("\n");
+                break;
+            case 15:
 
 
+            case 16:
+                printf("Thank you, come back soon");
+                return 0;
 
             default:
                 printf("Invalid choice! Please try again.\n");

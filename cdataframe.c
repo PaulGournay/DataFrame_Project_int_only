@@ -274,7 +274,7 @@ int nb_cells_value_less_than_x(CDATAFRAME dataframe, int x){
 }
 
 
-/*CDATAFRAME *load_from_csv(char *file_name, int *array, int size) {
+CDATAFRAME *load_from_csv(char *file_name, int *array, int size) {
     FILE *file = fopen(file_name, "r");
     if (file == NULL) {
         perror("Unable to open file");
@@ -323,4 +323,4 @@ int nb_cells_value_less_than_x(CDATAFRAME dataframe, int x){
 
     fclose(file);
     return dataframe;
-}*/
+}
